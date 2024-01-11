@@ -12,6 +12,7 @@ public enum RoadLine
 }
 public class Runnrer : MonoBehaviour
 {
+    [SerializeField] float positionX = 3.5f;
     [SerializeField] RoadLine line;
     void Start()
     {
@@ -22,17 +23,14 @@ public class Runnrer : MonoBehaviour
     void Update()
     {
         Move();
+        Status();
     }
 
     public void Move()
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if(line<=RoadLine.LEFT)
-            {
-                line = RoadLine.LEFT;
-            }
-            else
+            if(line>RoadLine.LEFT)
             {
                 line--;
             }
@@ -40,16 +38,36 @@ public class Runnrer : MonoBehaviour
          
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if(line>=RoadLine.RIGHT)
-            {
-                line = RoadLine.RIGHT;
-            }
-            else
+            if(line<RoadLine.RIGHT)       
             {
                 line++;
             }
         }
 
         
+    }
+
+    public void Status()
+    {
+        switch(line)
+        {
+            case RoadLine.LEFT:
+                SmoothMovement(-positionX);
+                break;
+            case RoadLine.MIDDLE:
+                SmoothMovement(0);
+                break;
+            case RoadLine.RIGHT:
+                SmoothMovement(positionX);
+                break;
+
+        }
+
+    }
+
+    public void SmoothMovement(float positionX)
+    {
+        transform.position = new Vector3(positionX, 0, 0);
+
     }
 }
