@@ -12,8 +12,14 @@ public enum RoadLine
 }
 public class Runnrer : MonoBehaviour
 {
+    [SerializeField] float Lerpspeed = 25.0f;
     [SerializeField] float positionX = 3.5f;
     [SerializeField] RoadLine line;
+    private void OnEnable()
+    {
+        InputManager.instance.keyAction += Move;
+    }
+
     void Start()
     {
         line = RoadLine.MIDDLE;
@@ -22,7 +28,7 @@ public class Runnrer : MonoBehaviour
     
     void Update()
     {
-        Move();
+        
         Status();
     }
 
@@ -67,7 +73,12 @@ public class Runnrer : MonoBehaviour
 
     public void SmoothMovement(float positionX)
     {
-        transform.position = new Vector3(positionX, 0, 0);
+        transform.position =  Vector3.Lerp(transform.position,new Vector3(positionX,0,0),Lerpspeed* Time.deltaTime);
 
+    }
+
+    private void OnDisable()
+    {
+        InputManager.instance.keyAction -= Move;
     }
 }
