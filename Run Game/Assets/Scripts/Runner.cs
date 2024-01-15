@@ -76,6 +76,15 @@ public class Runnrer : MonoBehaviour
         transform.position =  Vector3.Lerp(transform.position,new Vector3(positionX,0,0),Lerpspeed* Time.deltaTime);
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        CollisionObject collisionObject = other.GetComponent<CollisionObject>();
+
+        if(collisionObject !=null)
+        {
+            collisionObject.Activate(this);
+        }
+    }
 
     private void OnDisable()
     {
