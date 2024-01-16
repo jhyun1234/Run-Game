@@ -34,6 +34,7 @@ public class Runnrer : MonoBehaviour
 
     public void Move()
     {
+        
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(line>RoadLine.LEFT)

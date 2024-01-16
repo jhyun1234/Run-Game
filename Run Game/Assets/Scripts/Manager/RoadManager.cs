@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoadManager : MonoBehaviour
 {
     [SerializeField] float speed = 5.0f;
+    [SerializeField] float offset = 25.0f;
     [SerializeField] List<GameObject> roadList;
 
     private void Start()
@@ -22,7 +23,15 @@ public class RoadManager : MonoBehaviour
 
     public void NewPosition()
     {
-        GameObject newRoad = new GameObject();
+        GameObject newRoad = roadList[0];
+
+        roadList.Remove(newRoad);
+
+        float newZ = roadList[roadList.Count - 1].transform.position.z + offset;
+
+        newRoad.transform.position = new Vector3(0, 0, newZ);
+
+        roadList.Add(newRoad);
         
     }
 
