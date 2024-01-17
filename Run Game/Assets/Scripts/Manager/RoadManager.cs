@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoadManager : MonoBehaviour
 {
-    [SerializeField] float speed = 5.0f;
+    [SerializeField] float speed = 10.0f;
     [SerializeField] float offset = 25.0f;
     [SerializeField] List<GameObject> roadList;
 

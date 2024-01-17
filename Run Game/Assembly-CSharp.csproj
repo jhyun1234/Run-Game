@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Vehicle.cs" />
     <Compile Include="Assets\Scripts\Manager\ResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Manager\RoadManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
