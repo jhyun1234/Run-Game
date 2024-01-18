@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 175044588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0, z: 100}
+  m_LocalPosition: {x: -2.5, y: 0.65, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,7 +756,7 @@ Transform:
   m_GameObject: {fileID: 1061430707}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0.65, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1096,7 +1096,7 @@ Transform:
   m_GameObject: {fileID: 1504140881}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0, z: 100}
+  m_LocalPosition: {x: 2.5, y: 0.65, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1283,10 +1283,13 @@ MonoBehaviour:
   - {fileID: 175044589}
   - {fileID: 1061430708}
   vehicleObject:
-  - {fileID: 157538, guid: e39d5c824186a1a489d4f0109343173e, type: 3}
+  - {fileID: 160038, guid: 6346f9198ebfb674baa1a61f29dc6060, type: 3}
   - {fileID: 134962, guid: 1bc3a967e1e743b41b30f111c58ba985, type: 3}
-  - {fileID: 162266, guid: 17683e3ffcde346458c0fa5f35c39b9c, type: 3}
+  - {fileID: 116448, guid: 7ee69ef87f85ae447998d4abab175cf9, type: 3}
   - {fileID: 116448, guid: 8e633bea1c2f0644fb922e9bbe329648, type: 3}
+  random: 0
+  randomPosition: 0
+  compare: -1
 --- !u!4 &1861536806
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,7 +1298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861536804}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

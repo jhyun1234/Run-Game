@@ -10,7 +10,7 @@ public class Vehicle : CollisionObject
 
     void OnEnable()
     {
-        direction = Vector3.forward;
+        direction = Vector3.right;
         
     }
 
