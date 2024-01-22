@@ -33,6 +33,19 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    public bool FullVehicle()
+    {
+        for(int i=0; i<vehicleList.Count;i++)
+        {
+            if (vehicleList[i].activeSelf ==false)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     IEnumerator ActiveVehicle()
     {
 
@@ -42,12 +55,25 @@ public class SpawnManager : MonoBehaviour
             {
                 random = Random.Range(0, vehicleObject.Length);
 
+                // 현재 게임 오브젝트가 활성화되어 있는지 확인한다.
                 while (vehicleList[random].activeSelf == true)
                 {
 
-                    
+                    if(FullVehicle()) // 현재 리스트에 있는 모든 게임 오브ㅈ
+                    {
+                        // 모든 게임 오브젝트가 활성화되어 있다면 게임 오브젝트를 새로 생성한 다음
+                        // vehicle 을 리스트에 넣어준다.
 
-                    random = (random + 1) % vehicleObject.Length;
+                        GameObject vehicle = Instantiate(vehicleObject[Random.Range(0, vehicleObject.Length)]);
+                        vehicle.SetActive(false);
+
+                        vehicleList.Add(vehicle);
+                    }
+
+                    // 현재 리스트에 있는 모든 게임 오브젝트가 활성화되어 있지 않다면
+                    // random 변수의 값을 +1을 해서 다시 검색한다.
+
+                    random = (random + 1) % vehicleList.Count;
                 }
 
                 // 랜덤으로 위치를 설정하는 변수를 선언한다.
@@ -72,7 +98,7 @@ public class SpawnManager : MonoBehaviour
 
                 
             }
-            yield return new WaitForSeconds(5);
+            yield return CoroutineCache.WaitForSeconds(5f);
 
         }
 
