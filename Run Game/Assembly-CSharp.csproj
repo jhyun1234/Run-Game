@@ -60,16 +60,17 @@
     <Analyzer Include="D:\unity\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\RoadBox.cs" />
-    <Compile Include="Assets\Scripts\CollisionObject.cs" />
+    <Compile Include="Assets\Scripts\Colision Object\RoadBox.cs" />
+    <Compile Include="Assets\Scripts\AsyncSceneLoader.cs" />
+    <Compile Include="Assets\Scripts\etc\CoroutineCache.cs" />
+    <Compile Include="Assets\Scripts\Colision Object\CollisionObject.cs" />
     <Compile Include="Assets\Scripts\Runner.cs" />
     <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
     <Compile Include="Assets\Scripts\Vehicle.cs" />
-    <Compile Include="Assets\Scripts\DisableZone.cs" />
     <Compile Include="Assets\Scripts\Manager\ResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Manager\RoadManager.cs" />
-    <Compile Include="Assets\Scripts\CoroutineCache.cs" />
     <Compile Include="Assets\Scripts\Manager\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Colision Object\DisableZone.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
