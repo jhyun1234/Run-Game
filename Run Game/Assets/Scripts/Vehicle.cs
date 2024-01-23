@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Vehicle : CollisionObject
 {
-    [SerializeField] float speed = 5.0f;
+    [SerializeField] float speed;
     [SerializeField] Vector3 direction;
 
 
+    public float Speed
+    {
+        set { speed = value; }
+        get { return speed; }
+    }
     void OnEnable()
     {
+        speed = Random.Range(5, 15);
         direction = Vector3.right;
         
     }

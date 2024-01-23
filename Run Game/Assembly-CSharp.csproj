@@ -67,9 +67,11 @@
     <Compile Include="Assets\Scripts\Runner.cs" />
     <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
     <Compile Include="Assets\Scripts\Vehicle.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Manager\ResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Manager\RoadManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Colision Object\VehicleDetector.cs" />
     <Compile Include="Assets\Scripts\Colision Object\DisableZone.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
   </ItemGroup>
