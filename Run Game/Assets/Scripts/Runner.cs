@@ -12,6 +12,8 @@ public enum RoadLine
 }
 public class Runnrer : MonoBehaviour
 {
+    public Animator animator;
+
     [SerializeField] float Lerpspeed = 25.0f;
     [SerializeField] float positionX = 3.5f;
     [SerializeField] RoadLine line;
@@ -34,8 +36,11 @@ public class Runnrer : MonoBehaviour
 
     public void Move()
     {
-        
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if (GameManager.instance.state == false)
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(line>RoadLine.LEFT)
             {

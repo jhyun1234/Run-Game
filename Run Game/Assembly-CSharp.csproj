@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Manager\ResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Manager\RoadManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Colision Object\VehicleDetector.cs" />
     <Compile Include="Assets\Scripts\Colision Object\DisableZone.cs" />

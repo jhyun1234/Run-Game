@@ -5,9 +5,18 @@ using UnityEngine.Events;
 
 public class RoadBox : CollisionObject
 {
+    [SerializeField] float inintSpeed;
     [SerializeField] UnityEvent callback;
-    public override void Activate(Runnrer runnrer)
+
+    private void Start()
     {
+        inintSpeed = GameManager.instance.Speed;
+    }
+    public override void Activate(Runnrer runner)
+    {
+        runner.animator.speed = GameManager.instance.Speed / inintSpeed;
         callback.Invoke();
+
+        GameManager.instance.IncreaseSpeed();
     }
 }

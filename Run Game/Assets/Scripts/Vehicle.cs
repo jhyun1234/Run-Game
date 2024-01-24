@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Vehicle : CollisionObject
@@ -15,7 +16,7 @@ public class Vehicle : CollisionObject
     }
     void OnEnable()
     {
-        speed = Random.Range(5, 15);
+        speed =GameManager.instance.Speed + Random.Range(5, 15);
         direction = Vector3.right;
         
     }
@@ -23,11 +24,19 @@ public class Vehicle : CollisionObject
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.instance.state == false)
+        {
+            return;
+        }
+        
+
+
         transform.Translate(direction * speed * Time.deltaTime);
 
     }
     public override void Activate(Runnrer runnrer)
     {
-        Debug.Log("Game Over");
+        runnrer.animator.Play("Die");
+        GameManager.instance.GameOver();
     }
 }

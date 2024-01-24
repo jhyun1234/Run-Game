@@ -10,7 +10,7 @@ public class VehicleDetector : MonoBehaviour
 
         if(vehicle != null)
         {
-            Debug.Log("Ãæµ¹");
+            
             vehicle.GetComponent<Vehicle>().Speed = transform.parent.GetComponent<Vehicle>().Speed;
         }
     }
