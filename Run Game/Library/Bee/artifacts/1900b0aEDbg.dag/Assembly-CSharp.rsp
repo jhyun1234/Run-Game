@@ -357,6 +357,8 @@
 "Assets/Scripts/AsyncSceneLoader.cs"
 "Assets/Scripts/Colision Object/CollisionObject.cs"
 "Assets/Scripts/Colision Object/DisableZone.cs"
+"Assets/Scripts/Colision Object/LeftCollider.cs"
+"Assets/Scripts/Colision Object/RightCollider.cs"
 "Assets/Scripts/Colision Object/RoadBox.cs"
 "Assets/Scripts/Colision Object/VehicleDetector.cs"
 "Assets/Scripts/etc/CoroutineCache.cs"

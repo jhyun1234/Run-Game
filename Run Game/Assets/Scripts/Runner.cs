@@ -17,6 +17,8 @@ public class Runnrer : MonoBehaviour
     [SerializeField] float Lerpspeed = 25.0f;
     [SerializeField] float positionX = 3.5f;
     [SerializeField] RoadLine line;
+    [SerializeField] LeftCollider leftCollider;
+    [SerializeField] RightCollider rightCollider;
     private void OnEnable()
     {
         InputManager.instance.keyAction += Move;
@@ -42,6 +44,10 @@ public class Runnrer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            if (leftCollider.Detector)
+            {
+                return;
+            }
             if(line>RoadLine.LEFT)
             {
                 line--;
@@ -50,6 +56,10 @@ public class Runnrer : MonoBehaviour
          
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
+            if(rightCollider.Detector)
+            {
+                return;
+            }
             if(line<RoadLine.RIGHT)       
             {
                 line++;
