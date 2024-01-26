@@ -94,7 +94,7 @@ public class SpawnManager : MonoBehaviour
                 vehicleList[random].SetActive(true);
             }
 
-            yield return CoroutineCache.WaitForSeconds(5f);
+            yield return CoroutineCache.WaitForSeconds(LevelManager.spawnTime);
         }
 
 
