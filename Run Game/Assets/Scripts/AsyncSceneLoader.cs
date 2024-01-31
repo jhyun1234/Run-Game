@@ -27,7 +27,7 @@ public class AsyncSceneLoader : Singleton<AsyncSceneLoader>
         fadeImage.gameObject.SetActive(true);
         while(color.a >0f)
         {
-            color.a -= Time.deltaTime;
+            color.a -= Time.unscaledDeltaTime;
             fadeImage.color = color;
             yield return null;
         }
@@ -54,7 +54,7 @@ public class AsyncSceneLoader : Singleton<AsyncSceneLoader>
 
         while(asyncOperation.isDone ==false)
         {
-            color.a += Time.deltaTime;
+            color.a += Time.unscaledDeltaTime;
             fadeImage.color = color;
 
            // float progress : 작업의 진행 정도를 0~1 사이의 값으로 확인하는 기능이다.

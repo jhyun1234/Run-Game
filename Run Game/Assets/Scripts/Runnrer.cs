@@ -25,9 +25,9 @@ public class Runnrer : MonoBehaviour
 
     void Start()
     {
+        line = RoadLine.MIDDLE;
         
         previousRoadLine = RoadLine.MIDDLE;
-        line = RoadLine.MIDDLE;
 
         InputManager.instance.keyAction += Move;
     }
@@ -83,19 +83,19 @@ public class Runnrer : MonoBehaviour
             case RoadLine.RIGHT:
                 SmoothMovement(positionX);
                 break;
-
+    
         }
-
+    
     }
     public void ReverPosition()
     {
         line = previousRoadLine;
     }
-    public void SmoothMovement(float positionX)
-    {
-        transform.position =  Vector3.Lerp(transform.position,new Vector3(positionX,0,0),Lerpspeed* Time.deltaTime);
-
-    }
+   public void SmoothMovement(float positionX)
+   {
+       transform.position =  Vector3.Lerp(transform.position,new Vector3(positionX,0,0),Lerpspeed* Time.deltaTime);
+   
+   }
     private void OnTriggerEnter(Collider other)
     {
         CollisionObject collisionObject = other.GetComponent<CollisionObject>();
