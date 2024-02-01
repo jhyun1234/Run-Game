@@ -16,16 +16,11 @@ public class Vehicle : MonoBehaviour
     }
     void OnEnable()
     {
-        if(minRandomSpeed < 19)
-        {
-          minRandomSpeed += 1;
-          
-
-        }
+        GameManager.instance.ControlRandomSpeed();
 
         direction = Vector3.forward;
 
-        speed =GameManager.instance.Speed + Random.Range(minRandomSpeed, maxRandomSpeed);
+        speed =GameManager.instance.Speed + Random.Range(GameManager.instance.minRandomSpeed,GameManager.instance.maxRandomSpeed);
         
     }
 

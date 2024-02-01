@@ -5,7 +5,7 @@ using System.IO;
 [System.Serializable]
 public class Data
 {
-    public int score;
+    public int bestScore;
 }
 
 public class DataManager : Singleton<DataManager>
@@ -15,7 +15,7 @@ public class DataManager : Singleton<DataManager>
     private void Start()
     {
         Load();
-        Debug.Log(data.score);
+       
     }
 
     public void Save()
@@ -41,4 +41,15 @@ public class DataManager : Singleton<DataManager>
 
 
     }
+
+    public void RenewalScore(int currentScore)
+    {
+        if(data.bestScore < currentScore)
+        {
+            data.bestScore = currentScore;
+
+            Save();
+        }
+    }
+
 }
