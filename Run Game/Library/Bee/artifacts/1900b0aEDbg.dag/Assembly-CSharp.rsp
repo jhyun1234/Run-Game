@@ -373,7 +373,7 @@
 "Assets/Scripts/Manager/RoadManager.cs"
 "Assets/Scripts/Manager/Singleton.cs"
 "Assets/Scripts/Manager/SpawnManager.cs"
-"Assets/Scripts/Runnrer.cs"
+"Assets/Scripts/Runner.cs"
 "Assets/Scripts/UI/GameOverPanel.cs"
 "Assets/Scripts/UI/PauseButton.cs"
 "Assets/Scripts/UI/PausePanel.cs"

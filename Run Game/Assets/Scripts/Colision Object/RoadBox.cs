@@ -12,7 +12,7 @@ public class RoadBox : CollisionObject
     {
         inintSpeed = GameManager.instance.Speed;
     }
-    public override void Activate(Runnrer runner)
+    public override void Activate(Runner runner)
     {
         runner.animator.speed = GameManager.instance.Speed / inintSpeed;
         callback.Invoke();

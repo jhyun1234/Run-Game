@@ -67,8 +67,8 @@
     <Compile Include="Assets\Scripts\etc\CoroutineCache.cs" />
     <Compile Include="Assets\Scripts\Colision Object\CollisionObject.cs" />
     <Compile Include="Assets\Scripts\Detector\MiddleDetector.cs" />
+    <Compile Include="Assets\Scripts\Runner.cs" />
     <Compile Include="Assets\Scripts\UI\PausePanel.cs" />
-    <Compile Include="Assets\Scripts\Runnrer.cs" />
     <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
     <Compile Include="Assets\Scripts\Vehicle.cs" />
     <Compile Include="Assets\Scripts\etc\Sound.cs" />
@@ -89,6 +89,7 @@
   <ItemGroup>
     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
+    <None Include="Assets\Shader\CurvedShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

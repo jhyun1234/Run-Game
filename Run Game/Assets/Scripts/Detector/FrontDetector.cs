@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FrontDetector : CollisionObject
 {
-    public override void Activate(Runnrer runnrer)
+    public override void Activate(Runner runner)
     {
-        runnrer.animator.Play("Die");
+        runner.animator.Play("Die");
         GameManager.instance.GameOver();
     }
 }

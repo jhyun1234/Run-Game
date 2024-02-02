@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MiddleDetctor : CollisionObject
 {
-    public override void Activate(Runnrer runnrer)
+    public override void Activate(Runner runnrer)
     {
-        runnrer.ReverPosition();
+        runnrer.RevertPosition();
         
     }
 }
